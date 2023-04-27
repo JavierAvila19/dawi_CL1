@@ -2,7 +2,8 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="dawicl1" transaction-type="RESOURCE_LOCAL">
 		<class>dawicl1.Cita</class>
-		<class>dawicl1.Doctores</class>
+		<class>dawicl1.Doctor</class>
+	
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/CL1_Avila_Infante"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>

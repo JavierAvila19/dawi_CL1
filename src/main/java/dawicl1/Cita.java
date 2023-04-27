@@ -30,10 +30,10 @@ public class Cita implements Serializable {
 	@Column(name="num_cita")
 	private int numCita;
 
-	//bi-directional many-to-one association to Doctores
+	//bi-directional many-to-one association to Doctor
 	@ManyToOne
 	@JoinColumn(name="id_doctor")
-	private Doctores doctores;
+	private Doctor doctor;
 
 	public Cita() {
 	}
@@ -70,12 +70,12 @@ public class Cita implements Serializable {
 		this.numCita = numCita;
 	}
 
-	public Doctores getDoctores() {
-		return this.doctores;
+	public Doctor getDoctor() {
+		return this.doctor;
 	}
 
-	public void setDoctores(Doctores doctores) {
-		this.doctores = doctores;
+	public void setDoctor(Doctor doctor) {
+		this.doctor = doctor;
 	}
 
 }

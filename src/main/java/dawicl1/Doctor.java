@@ -6,13 +6,12 @@ import java.util.List;
 
 
 /**
- * The persistent class for the doctores database table.
+ * The persistent class for the doctor database table.
  * 
  */
 @Entity
-@Table(name="doctores")
-@NamedQuery(name="Doctores.findAll", query="SELECT d FROM Doctores d")
-public class Doctores implements Serializable {
+@NamedQuery(name="Doctor.findAll", query="SELECT d FROM Doctor d")
+public class Doctor implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -27,10 +26,10 @@ public class Doctores implements Serializable {
 	private String nomDoctor;
 
 	//bi-directional many-to-one association to Cita
-	@OneToMany(mappedBy="doctores")
+	@OneToMany(mappedBy="doctor")
 	private List<Cita> citas;
 
-	public Doctores() {
+	public Doctor() {
 	}
 
 	public int getIdDoctor() {
@@ -67,14 +66,14 @@ public class Doctores implements Serializable {
 
 	public Cita addCita(Cita cita) {
 		getCitas().add(cita);
-		cita.setDoctores(this);
+		cita.setDoctor(this);
 
 		return cita;
 	}
 
 	public Cita removeCita(Cita cita) {
 		getCitas().remove(cita);
-		cita.setDoctores(null);
+		cita.setDoctor(null);
 
 		return cita;
 	}
