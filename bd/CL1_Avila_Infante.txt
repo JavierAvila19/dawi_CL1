@@ -1,0 +1,20 @@
+create database CL1_Avila_Infante;
+
+use CL1_Avila_Infante;
+
+create table doctor(
+id_doctor int primary key,
+nom_doctor varchar(50),
+especialidad_doctor varchar(75)
+);
+
+
+create table citas(
+id_cita int primary key,
+num_cita int,
+fecha_cita varchar(12),
+nom_paciente_cita varchar(50),
+id_doctor int,
+foreign key (id_doctor) references doctor(id_doctor)
+
+);
