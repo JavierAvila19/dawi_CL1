@@ -3,6 +3,7 @@
 	<persistence-unit name="dawicl1" transaction-type="RESOURCE_LOCAL">
 		<class>dawicl1.Cita</class>
 		<class>dawicl1.Doctor</class>
+		
 	
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/CL1_Avila_Infante"/>
